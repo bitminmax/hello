@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!--引入外部文件,一定要创建为属性文件-->
+    <properties resource="db.properties"/>
+
+    <!--    设置日志-->
+    <settings>
+        <!--&lt;!&ndash; 普通的日志实现&ndash;&gt;-->
+                <setting name="logImpl" value="STDOUT_LOGGING"/>
+
+        <!--log4j的日志实现-->
+<!--        <setting name="logImpl" value="LOG4J"/>-->
+    </settings>
+    <!--    当这样配置时，User可以用在任何使用pojo.User的地方,存在的意义仅在于用来减少类完全限定名的冗余。-->
+    <typeAliases>
+        <typeAlias type="com.example.springboot02.pojo.User" alias="user"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mapper.xml"/>
+    </mappers>
+</configuration>
