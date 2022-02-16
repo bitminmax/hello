@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>登录成功</title>
+    <style type="text/css" >
+        ul li{
+            list-style: none;
+            display: inline;
+            font-size: 50px;
+            margin-left: 40%;
+        }
+        .li{
+            margin-left: 60px;
+        }
+
+    </style>
 </head>
 <body>
-       <h1>登录成功</h1>
+<div id="shouye">
+    <ul>
+        <a th:href="@{/shouYe}"><li>首页</li></a>
+        <a th:href="@{/user/login/my}"><li class="li">我的</li></a>
+
+    </ul>
+</div>
+     <div id="mydiv" th:align="center" >
+         <img  th:src="@{/images/01.webp}"/>
+
+
+  </div>
 </body>
 </html>

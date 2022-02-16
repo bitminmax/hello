@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>我的</title>
+</head>
+<body>
+     <h1>我的信息:</h1>
+     <h1 th:text="账号+':'+${user.getId()}"></h1>
+     <h1 th:text="姓名+':'+${user.getName()}"></h1>
+     <h1 th:text="会员+':'+${user.getVip()}"></h1>
+     <h1 th:text="注册时间+':'+${user.getRegistrationtime()}"></h1>
+
+</body>
+</html>

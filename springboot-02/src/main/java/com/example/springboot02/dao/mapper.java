@@ -15,6 +15,10 @@ public interface mapper {
     public User update();
     //修改员工信息
     public  void insert();
-//登录操作
+   //登录操作
     public  String Login(Integer id);
+
+    //我的信息
+    public User user(Integer id);
+
 }

@@ -9,5 +9,8 @@
     </select>
    <select id="Login" resultType="String">
     select user.pwd from user where user.id=#{id}
-</select>
+</select >
+   <select id="user" resultType="user">
+       select user.id,user.name,user.vip,user.Registrationtime   from user  where user.id=#{id};
+   </select>
 </mapper>
